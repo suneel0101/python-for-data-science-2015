@@ -277,7 +277,7 @@ Let's see what happens...
 What is [pandas](http://pandas.pydata.org/pandas-docs/stable/)?
 
 - analyze tabular data
-- built on top of `scipy` and `numpy`, so quite fast
+- built on top of `scipy` and `numpy`, so quite fast and it's good to know some of the basics of those libraries as well since you'll likely use some function calls and have to interact with numpy arrays which are fancy, scalable lists.
 - incredibly powerful
 
 ## Our First DataSet
@@ -295,7 +295,7 @@ Questions:
 >>> import pandas as pd
 ```
 
-### Exercise
+### Exercise (185)
 We want to read in the csv file. With your partner, look in the pandas documentation (or Google) to find out how to read in a csv file given a URL.
 Then, read in the csv file from the above URL.
 
@@ -325,7 +325,7 @@ Then, read in the csv file from the above URL.
 >>> type(df[["Name"]])
 ```
 
-### Questions
+### Questions (200)
 There are so many functions in pandas that we'll just look at the most common ones.
 
 *Personal confession*, I don't memorize everything. I just make sure I can look up the documentation on demand.
@@ -337,28 +337,53 @@ Let's learn how to filter the data according to some criterion.
 Exercise:
 - Solo: How many accounts have a price greater than $12,000?
 
-
-#### Getting the max value (and similar quantities)
+#### Getting the max value (and similar quantities) (210)
 What is the maximum account price?
 
 Exercise:
 - Solo: What is the minimum account price?
 - Solo: What is the mean account price?
+- Solo: What is the sum of all the prices?
 
-#### The `unique` function
-- Get a unique list of company names. How many are there?
+#### Selecting data (220)
+- Select just the subset of data where status is pending
 
-Exercise:
-- Solo: How many unique representatives are there?
-- With partner: which representative has won the highest-price account?
 
-#### Aggregating
+#### Aggregating (225)
 - What is the total dollar amount pending?
 
+Step:
+1. start with the subset dataframe from the previous question
+2. add a column called Amount that is Quantity times Price
+3. sum up the filtered amounts
 
-#### Pivot tables
-- Let's break down our analysis.
+#### Pivot table basics (230)
+Pivot tables are a great tool to summarize the dataset. Same concept as in Excel. Let's try it out
 
-## Plotting the analysis
+First, let's take a look at the documentation [here](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.pivot_table.html).
 
-## Sneak peek of some Data Science
+```python
+>>> pd.pivot_table(df, index=["Name"])
+>>> pd.pivot_table(df,index=["Manager","Rep"])
+>>> pd.pivot_table(df,index=["Manager","Rep"],values=["Price"])
+# Is the price column correct?
+# import the numpy library to us the sum function
+>>> import numpy as np
+>>> pd.pivot_table(df,index=["Manager","Rep"],values=["Price"],aggfunc=np.sum)
+```
+Exercise:
+With partner: create a pivot table that indexes on Manager and Status and displays only the column Price, which contains the total price of accounts for each (Manager, Status) pair.
+
+*Hint*: use `fill_value`.
+
+## Plotting basics (245)
+Plotting can be really helpful when we have a few variables in our dataset.
+
+Once you start analyzing datasets with hundreds (even millions) of columns, we'll need more advanced statistical techniques to compress and visualize data.
+
+We'll be using `matplotlib`
+
+# Resources
+
+# Sources
+- http://pbpython.com/pandas-pivot-table-explained.html
