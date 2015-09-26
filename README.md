@@ -18,7 +18,7 @@ Students will be able to
 5. Intro to Sci-kit Learn (time permitting)
 6. Closing thoughts
 
-# Set Up Programming Environment
+# Set Up Programming Environment (10)
 ## Download and Installation
 Go through these steps on your own computer, but do so in collaboration with your neighbor.
 
@@ -35,7 +35,7 @@ Run the following code in iPython notebook by typing it into a cell and pressing
 print "Hello"
 ```
 
-# Review of Basic Python
+# Review of Basic Python (20)
 ## The Basic Data Types
 What are the basic data types?
 - Integers, e.g. 1, 2, 3
@@ -63,7 +63,7 @@ Do this exercise solo.
 
 Set a variable called `age` equal to your age. Then create a new variable called `future_age` that you set equal to `age` + 10. Then print `age` and separately print `future_age`.
 
-## Lists
+## Lists (30)
 Lists is a super useful data type.
 It's an ordered collection of items, which you can modify by adding or removing elements.
 
@@ -111,7 +111,7 @@ False
 - Get the length of the list
 ```
 
-## Dictionaries
+## Dictionaries (50)
 Dictionaries are also massively useful. You can think of them as maps, between as set of keys and their corresponding values.
 Let's look at one in the shell to better understand how they work and how they can be useful:
 
@@ -151,7 +151,7 @@ Create a dictionary called `class_data` with the following keys:
 - get the instructor name from the dictionary
 ```
 
-## If/Else
+## If/Else (70)
 If/else statements are blocks of our code that allow us to do different things based on some logical condition
 Let's learn the syntax, note INDENTATION is important:
 ```python
@@ -180,7 +180,7 @@ Given x = "John Jameson",
 - Construct an if/elif/else statement according to this logic: if "roger" is in x, print "Hi Roger!", elif the length of x is greater than 20, print "thats a long string", else print "Oh well!"
 ```
 
-## Loops
+## Loops (90)
 Loops let us pass through a set of values and do some operation on each.
 There are different kinds of loops, for loops and while loops. They're quite similar, but let's look at the canonical loop, the for loop.
 
@@ -219,7 +219,7 @@ Before we move on to some practice problems, here is a useful function:
 ### Exercise
 - Construct a list of numbers between 0 and 1000 that are divisible by 33
 
-## Functions
+## Functions (120)
 Functions are the heart and soul of python. Functions are blocks of code that take an input and based on some rules produce an output.
 
 Let's learn the syntax of functions:
@@ -232,11 +232,11 @@ Let's learn the syntax of functions:
 ```
 a and b are variables that the function `add` takes
 
-Practice problems:
-- create function `multiply` that takes two variables and returns their product
-- write a function that takes a list of numbers and return True if the sum of the numbers is even and False otherwise.
+### Exercises
+- solo: create function `multiply` that takes two variables and returns their product
+- with a partner: write a function that takes a list of numbers and return True if the sum of the numbers is even and False otherwise.
 
-# Using Other Libraries
+# Using Other Libraries (150)
 What is a library? A reusable, collection of code that someone else (or you) has already written. Some great built-in libraries:
 - `random`
 - `csv`
@@ -250,7 +250,7 @@ To use other libraries, we need to be able to:
 
 Let's start with the random library.
 
-## Random
+## The `random` library.
 Our first step is to locate the documentation. Google "python random". It should take you [here](https://docs.python.org/2/library/random.html)
 
 Let's import the library
@@ -270,8 +270,44 @@ Again, with your partner, use the `randint` function to generate a random number
 ### Exercise 3
 This time solo, use the `shuffle` function on this list: `[1, 2, 7, 5, 9, 10]`. What gets returned?
 
-# Intro to Pandas
+## What is `as`?
+```python
+>>> import random as rd
+```
+
+Let's see what happens...
+
+# Intro to Pandas (175)
+What is [pandas](http://pandas.pydata.org/pandas-docs/stable/)?
+
+- analyze tabular data
+- built on top of `scipy` and `numpy`, so quite fast
+- incredibly powerful
+
+## Our First DataSet
+[Here](https://s3.amazonaws.com/python-level-2/sales-funnel.csv) is the data set.
+
+### Exercise
+With your partner, download the data and look at it in excel.
+
+Questions:
+- What is this dataset about?
+- What are some questions you might ask about the data?
+
+### Importing pandas
+```python
+>>> import pandas as pd
+```
+
+### Exercise
+We want to read in the csv file. With your partner, look in the pandas documentation (or Google) to find out how to read in a csv file given a URL.
+Then, read in the csv file from the above URL.
+
+*Note*: We're going to be heavily commenting our code so that each step is super clear and we can refer back to it in the future and immediately understand what's being done.
 
 
-
-
+### Questions
+- How many different managers are there?
+- What percentage of accounts in the sales funnel have been won?
+- What is the total dollar amount pending?
+-
