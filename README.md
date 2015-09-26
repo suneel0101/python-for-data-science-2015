@@ -375,7 +375,8 @@ First, let's take a look at the documentation [here](http://pandas.pydata.org/pa
 >>> pd.pivot_table(df,index=["Manager","Rep"],values=["Price"],aggfunc=np.sum)
 ```
 Exercise:
-With partner: create a pivot table that indexes on Manager and Status and displays only the column Price, which contains the total price of accounts for each (Manager, Status) pair.
+- With partner: create a pivot table that indexes on Manager and Status and displays only the column Price, which contains the total price of accounts for each (Manager, Status) pair.
+- Solo: create a pivot table indexing on Status and displays only the column Price summed up per status.
 
 *Hint*: use `fill_value`.
 
