@@ -5,10 +5,6 @@ Students will be able to
 - use the basic functionality of `pandas` for data analysis
 - use iPython notebook to conduct their data analysis
 
-# Prerequisites
-- strongly recommend Learn Python the Hard Way
-- basic Python
-
 # Agenda
 0. Set up programming environment
 1. Warm Up
@@ -305,9 +301,64 @@ Then, read in the csv file from the above URL.
 
 *Note*: We're going to be heavily commenting our code so that each step is super clear and we can refer back to it in the future and immediately understand what's being done.
 
+### Basic manipulation
+```python
+# We've already read in csv data and saved it to a DataFrame called df
+# Let's see the columns
+>>> df.columns
+# Let's only see the first 5 rows
+>>> df[:5]
+# Let's only look at Name and Status
+>>> df[["Name", "Status"]]
+# Let's look at just Name
+>>> df["Name"]
+```
+### DataFrame vs DataSeries
+```python
+>>> type(df)
+>>> df["Name"]
+# just pass in the string "Name" in brackets
+# and we get a Series (1-dimensional)
+>>> type(df["Name"])
+# instead if you pass in the list ["Name"] in the brackets
+# we get a 2-dimensional DataFrame
+>>> type(df[["Name"]])
+```
 
 ### Questions
-- How many different managers are there?
-- What percentage of accounts in the sales funnel have been won?
+There are so many functions in pandas that we'll just look at the most common ones.
+
+*Personal confession*, I don't memorize everything. I just make sure I can look up the documentation on demand.
+
+#### Filtering dataframes
+Let's learn how to filter the data according to some criterion.
+- How many accounts have been won?
+
+Exercise:
+- Solo: How many accounts have a price greater than $12,000?
+
+
+#### Getting the max value (and similar quantities)
+What is the maximum account price?
+
+Exercise:
+- Solo: What is the minimum account price?
+- Solo: What is the mean account price?
+
+#### The `unique` function
+- Get a unique list of company names. How many are there?
+
+Exercise:
+- Solo: How many unique representatives are there?
+- With partner: which representative has won the highest-price account?
+
+#### Aggregating
 - What is the total dollar amount pending?
--
+
+
+#### Pivot tables
+- Let's break down our analysis.
+
+## Plotting the analysis
+
+## Sneak peek of some Data Science
