@@ -11,8 +11,11 @@ Students will be able to
 2. Review of Basic Python
 3. Using Other Libraries
 4. Intro to Pandas
-5. Intro to Sci-kit Learn (time permitting)
-6. Closing thoughts
+5. Wrap up & Closing thoughts
+
+# Rules
+- no Copy-Pasting. I swear, even just typing along almost mindlessly will help.
+- don't be afraid to ask questions (easier said than done, I understand)
 
 # Set Up Programming Environment (10)
 ## Download and Installation
@@ -376,12 +379,16 @@ With partner: create a pivot table that indexes on Manager and Status and displa
 
 *Hint*: use `fill_value`.
 
-## Plotting basics (245)
-Plotting can be really helpful when we have a few variables in our dataset.
+# Wrap Up (245)
 
-Once you start analyzing datasets with hundreds (even millions) of columns, we'll need more advanced statistical techniques to compress and visualize data.
+Think-Pair-Share
 
-We'll be using `matplotlib`
+1. solo: write down things you learned, things you have open questions about
+2. pair: discuss with a partner
+3. share with the class
+4. we'll address open questions as makes sense
+
+# Next Steps (260)
 
 # Resources
 
