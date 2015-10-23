@@ -1,4 +1,6 @@
 # Objectives
+The primary goal is to get the students comfortable with the popular data science libraries for analysis, visualization and modeling so that they can apply this knowledge in their work with data.
+
 Students will be able to
 - write basic Python programs
 - read the documentation for external libraries and use those libraries
