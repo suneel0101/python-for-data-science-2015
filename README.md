@@ -1,21 +1,19 @@
 # Objectives
 Students will be able to
-- write Python programs that use if-elses, for loops, lists, dictionaries
+- write basic Python programs
 - read the documentation for external libraries and use those libraries
 - use the basic functionality of `pandas` for data analysis
+- use `matplotlib` to visualize their data
+- use `scikit-learn` to create predictive models
 - use iPython notebook to conduct their data analysis
 
 # Agenda
 0. Set up programming environment
-1. Warm Up
-2. Review of Basic Python
-3. Using Other Libraries
-4. Intro to Pandas
+1. Quick Review of Basic Python
+2. Using Other Libraries
+3. Intro to Pandas
+4. Intro to Matplotlib
 5. Wrap up & Closing thoughts
-
-# Rules
-- no Copy-Pasting. I swear, even just typing along almost mindlessly will help.
-- don't be afraid to ask questions (easier said than done, I understand)
 
 # Set Up Programming Environment (10)
 ## Download and Installation
@@ -150,35 +148,6 @@ Create a dictionary called `class_data` with the following keys:
 - get the instructor name from the dictionary
 ```
 
-## If/Else (70)
-If/else statements are blocks of our code that allow us to do different things based on some logical condition
-Let's learn the syntax, note INDENTATION is important:
-```python
->>> x = 5
->>> if x > 4:
-        print "Hello"
-    else:
-        print "World"
-Hello
->>> if x < 5:
-        print "Less than five"
-    else:
-        print "Greater than or equal to five"
->>> if x == 1 or x == 2:
-        print "Ha"
-    elif x == 3:
-        print "Hey"
-    else:
-        print "Hi"
-```
-
-### Exercise
-```
-Given x = "John Jameson",
-- Construct an if else statement according to this logic: if "John" is in x, print "John is in x", otherwise print "John is not in x"
-- Construct an if/elif/else statement according to this logic: if "roger" is in x, print "Hi Roger!", elif the length of x is greater than 20, print "thats a long string", else print "Oh well!"
-```
-
 ## Loops (90)
 Loops let us pass through a set of values and do some operation on each.
 There are different kinds of loops, for loops and while loops. They're quite similar, but let's look at the canonical loop, the for loop.
@@ -260,14 +229,10 @@ Let's import the library
 
 How does python know what `random` is and how to find the code? Because it comes built-in to the Python language. Other libraries such as `pandas` will have to be installed prior to use.
 
-### Exercise 1
-Find the `randint` function in the documentation and explain to your neighbor what it does and how to use it.
+### Exercises
+1. Find the `randint` function in the documentation and explain to your neighbor what it does and how to use it.
+2. Again, with your partner, use the `randint` function to generate a random number between 1 and 125.
 
-### Exercise 2
-Again, with your partner, use the `randint` function to generate a random number between 1 and 125.
-
-### Exercise 3
-This time solo, use the `shuffle` function on this list: `[1, 2, 7, 5, 9, 10]`. What gets returned?
 
 ## What is `as`?
 ```python
@@ -329,13 +294,14 @@ Then, read in the csv file from the above URL.
 ```
 
 ### Questions (200)
-There are so many functions in pandas that we'll just look at the most common ones.
-
-*Personal confession*, I don't memorize everything. I just make sure I can look up the documentation on demand.
 
 #### Filtering dataframes
 Let's learn how to filter the data according to some criterion.
 - How many accounts have been won?
+
+```python
+>>> df[df['Status'] == 'won']
+```
 
 Exercise:
 - Solo: How many accounts have a price greater than $12,000?
@@ -348,17 +314,15 @@ Exercise:
 - Solo: What is the mean account price?
 - Solo: What is the sum of all the prices?
 
-#### Selecting data (220)
-- Select just the subset of data where status is pending
 
-
-#### Aggregating (225)
+#### Aggregating (220)
 - What is the total dollar amount pending?
 
-Step:
-1. start with the subset dataframe from the previous question
-2. add a column called Amount that is Quantity times Price
-3. sum up the filtered amounts
+Steps:
+1. add a column called Amount that is Quantity times Price
+2. select the subtable where status is pending
+3. sum up the filtered amounts in that subtable
+
 
 #### Pivot table basics (230)
 Pivot tables are a great tool to summarize the dataset. Same concept as in Excel. Let's try it out
@@ -378,20 +342,78 @@ Exercise:
 - With partner: create a pivot table that indexes on Manager and Status and displays only the column Price, which contains the total price of accounts for each (Manager, Status) pair.
 - Solo: create a pivot table indexing on Status and displays only the column Price summed up per status.
 
-*Hint*: use `fill_value`.
+# Plotting with `matplotlib` (240)
+Let's write this in the notebook:
+```python
+>>> %pylab inline
+```
+This specifies that plotted figures will be displayed in the notebook directly.
 
-# Wrap Up (245)
+## Try this
+```python
+import pylab
+import numpy as np
 
-Think-Pair-Share
 
-1. solo: write down things you learned, things you have open questions about
-2. pair: discuss with a partner
-3. share with the class
-4. we'll address open questions as makes sense
+x = np.linspace(0, 20, 1000)  # 100 evenly-spaced values from 0 to 50
+y = np.sin(x)
 
-# Next Steps (260)
+pylab.plot(x, y)
+```
+What do you see?
 
-# Resources
+
+## Customizing axes and titles
+```python
+pylab.plot(x, y)
+
+pylab.xlabel('this is x!')
+pylab.ylabel('this is y!')
+pylab.title('My First Plot')
+```
+
+## Two plots together, with a legend
+```python
+x = np.linspace(0, 20, 1000)
+y1 = np.sin(x)
+y2 = np.cos(x)
+
+pylab.plot(x, y1, '-b', label='sine')
+pylab.plot(x, y2, '-r', label='cosine')
+pylab.legend(loc='upper right')
+pylab.ylim(-1.5, 2.0)
+```
+
+## Exercise
+```
+x = [1, 2, 3, 4, 5]
+y = [2.3, 4.5, -5.6, 7.8]
+
+Plot x against y.
+```
+
+# Real Data Science (260)
+We're going to apply multivariate linear regression on the data to create a model that predicts house price based on other factors.
+
+## Question
+- What is linear regression?
+- What is a data science model?
+- What is cross-validation?
+
+## Code
+The `scikit-learn` library is a goldmine of standard statistical and machine learning algorithms. [Documentation](http://scikit-learn.org/stable/documentation.html)
+
+Follow the notebook [here](http://nbviewer.ipython.org/gist/suneel0101/d5b521a7d300b0e58325). *Note*: You must type these in your own notebook, it's not good enough to just look at it!
+
+# Next Steps
+Some recommendations as you move forward:
+- build a Django app
+- do more Pandas data analysis
+- build d3.js data visualizations
+- use scikit-learn to do machine learning
+- take the GA Data Science part-time course
 
 # Sources
-- http://pbpython.com/pandas-pivot-table-explained.html
+- [Pivot Tables Explained](http://pbpython.com/pandas-pivot-table-explained.html)
+- [Plotting Tutorial](http://jakevdp.github.io/mpl_tutorial/tutorial_pages/tut1.html)
+- [Linear Regression on Boston Housing Data](http://scikit-learn.org/stable/auto_examples/plot_cv_predict.html#example-plot-cv-predict-py)
