@@ -401,9 +401,9 @@ We're going to apply multivariate linear regression on the data to create a mode
 - What is cross-validation?
 
 ## Code
-The `scikit-learn` library is a goldmine of standard statistical and machine learning algorithms. [Documentation](http://scikit-learn.org/stable/documentation.html)
+The `scikit-learn` library is a goldmine of standard statistical and machine learning algorithms.
 
-Follow the notebook [here](http://nbviewer.ipython.org/gist/suneel0101/d5b521a7d300b0e58325). *Note*: You must type these in your own notebook, it's not good enough to just look at it!
+[Documentation](http://scikit-learn.org/stable/documentation.html)
 
 # Next Steps
 Some recommendations as you move forward:
@@ -417,3 +417,4 @@ Some recommendations as you move forward:
 - [Pivot Tables Explained](http://pbpython.com/pandas-pivot-table-explained.html)
 - [Plotting Tutorial](http://jakevdp.github.io/mpl_tutorial/tutorial_pages/tut1.html)
 - [Linear Regression on Boston Housing Data](http://scikit-learn.org/stable/auto_examples/plot_cv_predict.html#example-plot-cv-predict-py)
+- [Class-specific notebook on scikit-learn](http://nbviewer.ipython.org/gist/suneel0101/d5b521a7d300b0e58325)
