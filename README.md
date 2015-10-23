@@ -405,6 +405,8 @@ The `scikit-learn` library is a goldmine of standard statistical and machine lea
 
 [Documentation](http://scikit-learn.org/stable/documentation.html)
 
+We are going to step through an example of predicting Boston house prices using linear regression.
+
 # Next Steps
 Some recommendations as you move forward:
 - build a Django app
