@@ -36,18 +36,6 @@ names = ["Michael Fassbender", "Karlie Kloss", "Taylor Swift", "Justin Bieber"]
 3. sort the list of names alphabetically using the built-in `sorted` function (HINT: Use Google)
 4. sort the list of names by length using the built-in `sorted` function
 
-# Documentation Warm-Up (50)
-*Question*:  What is a library?
-
-Let's warm-up our documentation comprehension skills by taking a look at the `random` library.
-
-With a partner,
-0. Google "python random"
-1. Open up the official Python documentation of the `random` library.
-2. Read about the `randint` function. What does it do?
-3. Look up an example of it
-4. Use it to generate a random number between 1 and 1000.
-
 # Pandas (65)
 *Question* What is [`pandas`](http://pandas.pydata.org/pandas-docs/stable/)?
 
