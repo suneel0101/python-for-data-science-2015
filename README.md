@@ -51,16 +51,16 @@ With a partner,
 # Pandas (65)
 *Question* What is [`pandas`](http://pandas.pydata.org/pandas-docs/stable/)?
 
-[Here](https://s3.amazonaws.com/python-level-2/sales-funnel.csv) is our first data set.
+[Here](https://s3.amazonaws.com/python-level-2/sales-funnel.csv) is our first data set. Let's download it and upload it to the datasets folder within the notebook.
 
 ## Preliminary Exercise
 With your partner
 0. Download and open the dataset
 1. What is this dataset about?
 2. What are some questions you might ask about the data?
-3. Google/use the pandas documentation to read in a csv file from a URL.
 
 ## Basic Manipulation (75)
+0. Let's read in the data.
 0. How do we see what columns are available?
 1. How do we look at just the head or tail of the dataset?
 2. How do we look at only a few rows?
@@ -99,18 +99,22 @@ Let's take a look at the documentation [here](http://pandas.pydata.org/pandas-do
 (Creative) Exercise: with a partner, use pivot tables to play around with the data. What pivots do you find particularly interesting or useful for this dataset?
 
 ## Solo Practice (150)
-0. Read in this dataset
+0. Read in [this dataset](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/citibike-data-truncated.csv)
 1. What is this dataset about?
-2. What is the average trip time?
-3. What is the average trip time by station?
+2. Let's delete the Unnamed: 0 column.
+4. Let's compute the duration by turning starttime and stopttime into datetime objects and computing their difference.
+5. What is the average trip time? What is the minimum and maximum trip time? What is the standard deviation?
+6. What is the average trip time by station? (Hint: Use pivot tables)
 
 ** STRETCH/BIO BREAK*
 
 # Intro the Data Science (180)
 *Think/Pair/Share*: What is data science? What are some examples of datascience
 
-[Here](https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data) is our data set.
+[Here](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/Boston_Housing.csv) is our data set.
 [Here](https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.names) is the description of the data.
+
+https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/housing_prices.csv
 
 ## Data Science Terminology
 - features
@@ -121,13 +125,14 @@ Examples:
 - netflix
 
 With a partner,
+
 0. Read the data description
 1. Discuss the data and what we could use this data for
-2. Read in the data
+2. Upload to datasets/ in the notebook and read in the data with pandas.
 
 Together, (190)
-1. Let's assign the column names for ease of analysis.
-2. Let's use pandas's built-in descriptive statistics method to get a statistical summary of the data.
+
+1. Let's use pandas's built-in descriptive statistics method to get a statistical summary of the data.
 3. Let's plot CRIM against MEDV
 4. By yourself, generate the remaining 12 plots (ZN against MEDV, ..., LSTAT against MEV)
 5. Which feature looks to be most predictive
@@ -140,6 +145,7 @@ Together, (190)
 - validation set
 
 Together, (215)
+
 0. Let's separate the data into feature and target.
 1. Let's separate the feature and target into training and validation set.
 2. Let's fit the linear regression model using 3 columns.
@@ -150,10 +156,10 @@ Together, (215)
 7. Let's use `cross_val_predict` as a shortcut.
 
 On your own, (230)
+
 0. Run the regression using all of the feature columns.
 1. Use intercept. How does the model improve/worsen?
 2. Plot the predictions against the true values.
-
 
 # Using Data Science for Classification
 ## Even More Data Science Terminology
@@ -171,10 +177,12 @@ On your own, (230)
 [Here's](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data) the dataset.
 
 By yourself, take 5 minutes to do the following:
+
 0. Read the dataset description
 1. Read the dataset into pandas
 
 Together,
+
 0. Separate into feature and target
 1. Split into test and training set
 2. Train the RandomForest and then test it out on the validation set. How did it do? Which features were most predictive?
