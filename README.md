@@ -98,7 +98,7 @@ Let's take a look at the documentation [here](http://pandas.pydata.org/pandas-do
 
 (Creative) Exercise: with a partner, use pivot tables to play around with the data. What pivots do you find particularly interesting or useful for this dataset?
 
-## Solo Practice (150)
+## (Depending on Time) Solo Practice (150)
 0. Read in [this dataset](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/citibike-data-truncated.csv)
 1. What is this dataset about?
 2. Let's delete the Unnamed: 0 column.
@@ -162,28 +162,29 @@ On your own, (230)
 1. How does the model improve/worsen?
 
 
-# Using Data Science for Classification
+# Using Data Science for Classification (240)
 ## Even More Data Science Terminology
 - regression
 - classification
+*Question*: What are some more examples of regression applications? classification applications?
 
-## Popular Classification Algorithms
+## Popular Classification Algorithms (245)
 - RandomForest
 - Logistic Regression (poorly named, I know!)
 - Support Vector Machines
 - Neural Networks (Deep Learning...)
 - k Nearest Neighbors
 
-## Overview of K Nearest Neighbors
+## Overview of K Nearest Neighbors (250)
 - simple model
 - works well when there aren't too many different features
 - works well when the scale of each feature is similar (why?). we'll see this in our example.
 
-### Worksheets
+### Worksheets (260)
 - [kNN in one dimension](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/worksheets/worksheet_1_kNN.pdf)
 - [kNN in multiple dimensions](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/worksheets/worksheet_2_kNN.pdf)
 
-## Dataset
+## Dataset (275)
 - [Here's](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/breast-cancer.csv) a description of our dataset.
 - [Here's](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data) the dataset.
 
@@ -194,7 +195,7 @@ By yourself, take 5 minutes to do the following:
 0. Read the dataset description. What is this dataset about?
 1. Upload the dataset to datasets/ in our notebook and read the dataset into pandas
 
-### Together
+### Together (280)
 
 0. Separate into feature and target
 1. Use cross val to run KNeighborsClassifier
@@ -209,7 +210,7 @@ By yourself, take 5 minutes to do the following:
 - For kNN, what can/did we tune?
 
 
-# Saving and Sharing our Notebook
+# Saving and Sharing our Notebook (310)
 0. Download your notebook
 1. Open it up in a text editor
 2. Copy all the text
