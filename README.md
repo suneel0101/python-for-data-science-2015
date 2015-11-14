@@ -183,16 +183,18 @@ On your own, (230)
 - [kNN in one dimension](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/worksheets/worksheet_1_kNN.pdf)
 - [kNN in multiple dimensions](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/worksheets/worksheet_2_kNN.pdf)
 
-
+## Dataset
 - [Here's](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/breast-cancer.csv) a description of our dataset.
 - [Here's](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data) the dataset.
 
+
+### Preliminary Exercises
 By yourself, take 5 minutes to do the following:
 
-0. Read the dataset description
+0. Read the dataset description. What is this dataset about?
 1. Upload the dataset to datasets/ in our notebook and read the dataset into pandas
 
-Together,
+### Together
 
 0. Separate into feature and target
 1. Use cross val to run KNeighborsClassifier
@@ -202,7 +204,7 @@ Together,
 5. Try KNeighbors again for the different values of n_neighbors. How did it do? Which value of n_neighbors was best?
 6. Let's manually use `train_test_split` and compare the predicted values with the true values in the test set to more concretely see the output of the model.
 
-## Tuning the model
+### Tuning the model
 - Every data science model (algorithm) has parameters you can tune to improve the accuracy of the model.
 - For kNN, what can/did we tune?
 
