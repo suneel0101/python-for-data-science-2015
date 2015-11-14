@@ -213,10 +213,10 @@ By yourself, take 5 minutes to do the following:
 0. Download your notebook
 1. Open it up in a text editor
 2. Copy all the text
-3. Paste it into a [gist][http://gist.github.com]
+3. Paste it into a [gist](http://gist.github.com)
 4. Create a secret gist
 5. Copy the browser url
-6. Go [here](http://ipython.nbviewer.org) and paste that url
+6. Go [here](http://nbviewer.ipython.org) and paste that url
 7. Voila!
 
 # Possible Next Steps
