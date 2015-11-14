@@ -106,7 +106,7 @@ Let's take a look at the documentation [here](http://pandas.pydata.org/pandas-do
 5. What is the average trip time? What is the minimum and maximum trip time? What is the standard deviation?
 6. What is the average trip time by station? (Hint: Use pivot tables)
 
-** STRETCH/BIO BREAK*
+**STRETCH/BIO BREAK**
 
 # Intro the Data Science (180)
 *Think/Pair/Share*: What is data science? What are some examples of datascience
@@ -148,13 +148,15 @@ Together, (215)
 
 0. Let's separate the data into feature and target.
 1. Let's separate the feature and target into training and validation set.
-2. Let's fit the linear regression model using 3 columns.
+2. Let's fit the [linear regression model](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) using 3 columns.
 3. Let's plot the linear regression model.
 4. Let's plot the predictions.
 5. Let's measure the accuracy.
 6. Let's see which columns were most predictive.
-7. Let's use `cross_val_predict` as a shortcut to get the predicted values.
-8. Let's use `cross_val_score` as a shortcut for the R^2 values. What does `cv` do?
+7. Let's use [`cross_val_predict`](http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.cross_val_predict.html) as a shortcut to get the predicted values.
+8. Let's use [`cross_val_score`](http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.cross_val_score.html) as a shortcut for the R^2 values. What does `cv` do?
+
+
 
 On your own, (230)
 
@@ -198,7 +200,7 @@ By yourself, take 5 minutes to do the following:
 ### Together (280)
 
 0. Separate into feature and target
-1. Use cross val to run KNeighborsClassifier
+1. Use cross val to run [`KNeighborsClassifier`](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
 2. Plot these values of n_neighbors 2, 3, 4, 5, 10 against accuracy score. How did it do?
 3. Let's describe the data.
 4. Let's normalize the data using [`normalize`](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.normalize.html)
