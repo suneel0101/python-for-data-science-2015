@@ -111,8 +111,8 @@ Let's take a look at the documentation [here](http://pandas.pydata.org/pandas-do
 # Intro the Data Science (180)
 *Think/Pair/Share*: What is data science? What are some examples of datascience
 
-[Here](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/Boston_Housing.csv) is our data set.
-[Here](https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.names) is the description of the data.
+- [Here](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/Boston_Housing.csv) is our data set.
+- [Here](https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.names) is the description of the data.
 
 https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/housing_prices.csv
 
@@ -153,13 +153,14 @@ Together, (215)
 4. Let's plot the predictions.
 5. Let's measure the accuracy.
 6. Let's see which columns were most predictive.
-7. Let's use `cross_val_predict` as a shortcut.
+7. Let's use `cross_val_predict` as a shortcut to get the predicted values.
+8. Let's use `cross_val_score` as a shortcut for the R^2 values. What does `cv` do?
 
 On your own, (230)
 
 0. Run the regression using all of the feature columns.
-1. Use intercept. How does the model improve/worsen?
-2. Plot the predictions against the true values.
+1. How does the model improve/worsen?
+
 
 # Using Data Science for Classification
 ## Even More Data Science Terminology
@@ -167,34 +168,44 @@ On your own, (230)
 - classification
 
 ## Popular Classification Algorithms
-- k Nearest Neighbors
 - RandomForest
 - Logistic Regression (poorly named, I know!)
 - Support Vector Machines
 - Neural Networks (Deep Learning...)
+- k Nearest Neighbors
 
-[Here's](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.names) a description of our dataset.
-[Here's](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data) the dataset.
+## Overview of K Nearest Neighbors
+- simple model
+- works well when there aren't too many different features
+- works well when the scale of each feature is similar (why?). we'll see this in our example.
+
+### Worksheets
+- [kNN in one dimension](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/worksheets/worksheet_1_kNN.pdf)
+- [kNN in multiple dimensions](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/worksheets/worksheet_2_kNN.pdf)
+
+
+- [Here's](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/breast-cancer.csv) a description of our dataset.
+- [Here's](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data) the dataset.
 
 By yourself, take 5 minutes to do the following:
 
 0. Read the dataset description
-1. Read the dataset into pandas
+1. Upload the dataset to datasets/ in our notebook and read the dataset into pandas
 
 Together,
 
 0. Separate into feature and target
-1. Split into test and training set
-2. Train the RandomForest and then test it out on the validation set. How did it do? Which features were most predictive?
-3. Use cross_val_score instead as a shortcut for the above
-4. Let's look at the documentation of the RandomForest
+1. Use cross val to run KNeighborsClassifier
+2. Plot these values of n_neighbors 2, 3, 4, 5, 10 against accuracy score. How did it do?
+3. Let's describe the data.
+4. Let's normalize the data using [`normalize`](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.normalize.html)
+5. Try KNeighbors again for the different values of n_neighbors. How did it do? Which value of n_neighbors was best?
+6. Let's manually use `train_test_split` and compare the predicted values with the true values in the test set to more concretely see the output of the model.
 
 ## Tuning the model
 - Every data science model (algorithm) has parameters you can tune to improve the accuracy of the model.
-- For RandomForest, what are the parameters we can tune? One is the number of trees in the forest.
+- For kNN, what can/did we tune?
 
-5. Try out RandomForest with the following values of n_estimators: 5, 10, 20, 50, 100, 500
-6. Plot the accuracies against the value of n_estimators.
 
 # Saving and Sharing our Notebook
 0. Download your notebook
@@ -210,6 +221,5 @@ Together,
 - Build a Django app
 - Run through more pandas tutorials
 - Run through some sci-kit learn tutorials and examples
-- Go through some of [these iPython notebooks]()
-- Take the GA Data Science [part time course]()
-- To up your pure Python fluency, do tons of [Euler problems]()
+- Take the GA Data Science part time course
+- To up your pure Python fluency, do tons of [Euler problems](https://projecteuler.net/archives)
