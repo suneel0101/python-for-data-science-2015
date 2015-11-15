@@ -102,8 +102,6 @@ Let's take a look at the documentation [here](http://pandas.pydata.org/pandas-do
 - [Here](https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/Boston_Housing.csv) is our data set.
 - [Here](https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.names) is the description of the data.
 
-https://s3-us-west-2.amazonaws.com/ga-dat-2015-suneel/datasets/housing_prices.csv
-
 ## Data Science Terminology
 - features
 - target
