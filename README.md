@@ -43,9 +43,10 @@ names = ["Michael Fassbender", "Karlie Kloss", "Taylor Swift", "Justin Bieber"]
 
 ## Preliminary Exercise
 With your partner
-0. Download and open the dataset
+
+1. Download and open the dataset
 1. What is this dataset about?
-2. What are some questions you might ask about the data?
+1. What are some questions you might ask about the data?
 
 ## Basic Manipulation (75)
 0. Let's read in the data.
